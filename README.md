@@ -1,4 +1,4 @@
-# Project Support### Introduction
+### Introduction
 This project is the second task given by HNG
 * Users can be created, gotten, updated and deleted.
 ### Installation Guide
@@ -9,12 +9,14 @@ This project is the second task given by HNG
 * Create an .env file in your project root folder and add your variables. See .env.sample for assistance.### Usage
 * Run npm start:dev to start the application.
 * Connect to the API using Postman on port 5000. 
-
+#### DB Model
+![UML](https://github.com/krendus/hng-task-2/assets/86895631/b976bba4-84cf-43c5-aef0-c79723bc7558)
 #### Endpoints
 | HTTP Verbs | Endpoint | Action |
 | --- | --- | --- |
 | POST | /api | To create a new user |
 ##### Request
+
 ```json
     {
         "name": "krendus"
@@ -39,7 +41,7 @@ This project is the second task given by HNG
 ##### Response
 ```json
     {
-        "message": "person created successfully",
+        "message": "person found successfully",
         "data": {
             "name": "krendus",
             "created_at": "2023-09-10T20:56:28.987Z",
@@ -73,7 +75,16 @@ This project is the second task given by HNG
 ```
 | HTTP Verbs | Endpoint | Action |
 | --- | --- | --- |
-| DELETE | /api?name=example_name | To delete a single user |
-
+| DELETE | /api?name=samuel | To delete a single user |
+##### Response
+```json
+  {
+      "message": "person deleted successfully",
+      "data": {
+          "acknowledged": true,
+          "deletedCount": 1
+      }
+  }
+```
 ### Technologies Used
 * [NodeJS](https://nodejs.org/) This is a cross-platform runtime environment built on Chrome's V8 JavaScript engine used in running JavaScript codes on the server. It allows for installation and managing of dependencies and communication with databases.* [ExpressJS](https://www.expresjs.org/) This is a NodeJS web application framework.* [MongoDB](https://www.mongodb.com/) This is a free open source NOSQL document database with scalability and flexibility. Data are stored in flexible JSON-like documents.* [Mongoose ODM](https://mongoosejs.com/) This makes it easy to write MongoDB validation by providing a straight-forward, schema-based solution to model to application data.
