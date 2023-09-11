@@ -2,7 +2,7 @@
 This project is the second task given by HNG
 * Users can be created, gotten, updated and deleted.
 ### Installation Guide
-* Clone this repository [here](https://github.com/krendus).
+* Clone this repository [here]([https://github.com/krendus](https://github.com/krendus/hng-task-2.git)).
 * The develop branch is the most stable branch at any given time, ensure you're working from it.
 * Run npm install to install all dependencies
 * You can either work with the default mLab database or use your locally installed MongoDB. Do configure to your choice in the application entry file.
