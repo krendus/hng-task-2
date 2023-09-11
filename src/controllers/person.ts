@@ -22,7 +22,12 @@ export const createPerson =async (req: Request, res: Response) => {
         if (person) {
             res.status(201).json({
                 message: "person created successfully",
-                data: person
+                data: {
+                    id: person._id,
+                    name: person.name,
+                    created_at: person.created_at,
+                    updated_at: person.updated_at
+                },
             })
             return;
         } else {
@@ -41,14 +46,18 @@ export const createPerson =async (req: Request, res: Response) => {
 }
 
 export const getSinglePerson = async (req: Request, res: Response) => {
-    let { name } = req.query;
-    name = typeof(name) === 'string' && name.trim().length > 0 ? name.trim() : '';
-    if(name) {
-        const person = await Person.findOne({ name });
+    let { id } = req.params;
+    if(id) {
+        const person = await Person.findById(id);
         if (person) {
             res.status(200).json({
                 message: "Person found successfully",
-                data: person,
+                data: {
+                    id: person._id,
+                    name: person.name,
+                    created_at: person.created_at,
+                    updated_at: person.updated_at
+                },
             })
         } else {
             res.status(404).json({
@@ -58,17 +67,17 @@ export const getSinglePerson = async (req: Request, res: Response) => {
         }
     } else {
         res.status(422).json({
-            message: "Please enter a valid name",
+            message: "Please enter a valid id",
             status: "error"
         })
     }
 }
 export const updateSinglePerson = async (req: Request, res: Response) => {
-    let {name: queryName} = req.query
+    let { id } = req.params;
     let { name } = req.body;
     name = typeof(name) === 'string' && name.trim().length > 0 ? name.trim() : '';
-    if (name) {
-        const person = await Person.findOne({ name: queryName });
+    if (id) {
+        const person = await Person.findById(id);
         if (person) {
             const date = new Date();
             person.name = name;
@@ -76,7 +85,12 @@ export const updateSinglePerson = async (req: Request, res: Response) => {
             await person.save();
             res.status(200).json({
                 message: "Person updated successfuly",
-                data: person,
+                data: {
+                    id: person._id,
+                    name: person.name,
+                    created_at: person.created_at,
+                    updated_at: person.updated_at
+                },
             })
         } else {
             res.status(404).json({
@@ -86,21 +100,20 @@ export const updateSinglePerson = async (req: Request, res: Response) => {
         }
     } else {
         res.status(422).json({
-            message: "Please enter a valid name",
+            message: "Please enter a valid id",
             status: "error"
         })
     }
 }
 export const deleteSinglePerson = async (req: Request, res: Response) => {
-    let { name } = req.query;
-    name = typeof(name) === 'string' && name.trim().length > 0 ? name.trim() : '';
-    if(name) {
-        const person = await Person.findOne({ name });
+    let { id } = req.params;
+    if(id) {
+        const person = await Person.findById(id);
         if (person) {
-            const deletedPerson = await Person.deleteOne({ name });
+            await person.deleteOne();
             res.json({
                 message: "person deleted successfully",
-                data: deletedPerson,
+                data: null,
             })
         } else {
             res.status(404).json({
@@ -110,7 +123,7 @@ export const deleteSinglePerson = async (req: Request, res: Response) => {
         }
     } else {
         res.status(422).json({
-            message: "Please enter a valid name",
+            message: "Please enter a valid id",
             status: "error"
         })
     }

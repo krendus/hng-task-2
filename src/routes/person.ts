@@ -4,15 +4,15 @@ import { createPerson, deleteSinglePerson, getSinglePerson, updateSinglePerson }
 const personRouter = Router();
 
 // To get a single user
-personRouter.get("/", getSinglePerson)
+personRouter.get("/:id", getSinglePerson)
 
 // To create a user
 personRouter.post("/", createPerson)
 
 // To update a user
-personRouter.patch("/", updateSinglePerson)
+personRouter.patch("/:id", updateSinglePerson)
 
 // To delete a user
-personRouter.delete("/", deleteSinglePerson)
+personRouter.delete("/:id", deleteSinglePerson)
 
 export default personRouter;

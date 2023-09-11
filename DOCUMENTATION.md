@@ -17,14 +17,13 @@
             "name": "krendus",
             "created_at": "2023-09-10T20:56:28.987Z",
             "updated_at": "2023-09-10T20:56:28.987Z",
-            "_id": "64fe2d7c92aee5c7315a670e",
-            "__v": 0
+            "id": "64fe2d7c92aee5c7315a670e"
         }
     }
 ```
 | HTTP Verbs | Endpoint | Action |
 | --- | --- | --- |
-| GET | /api?name=krendus | To get a single user |
+| GET | /api/:id | To get a single user |
 ##### Response
 ```json
     {
@@ -33,14 +32,13 @@
             "name": "krendus",
             "created_at": "2023-09-10T20:56:28.987Z",
             "updated_at": "2023-09-10T20:56:28.987Z",
-            "_id": "64fe2d7c92aee5c7315a670e",
-            "__v": 0
+            "id": "64fe2d7c92aee5c7315a670e"
         }
     }
 ```
 | HTTP Verbs | Endpoint | Action |
 | --- | --- | --- |
-| PATCH | /api?name=krendus | To create a new cause |
+| PATCH | /api/:id | To patch a user |
 ##### Request
 ```json
     {
@@ -52,24 +50,20 @@
     {
         "message": "Person updated successfuly",
         "data": {
-            "_id": "64fe2d7c92aee5c7315a670e",
+            "id": "64fe2d7c92aee5c7315a670e",
             "name": "samuel",
             "created_at": "2023-09-10T20:56:28.987Z",
-            "updated_at": "2023-09-10T21:54:47.530Z",
-            "__v": 0
+            "updated_at": "2023-09-10T21:54:47.530Z"
         }
     }
 ```
 | HTTP Verbs | Endpoint | Action |
 | --- | --- | --- |
-| DELETE | /api?name=samuel | To delete a single user |
+| DELETE | /api/:id | To delete a single user |
 ##### Response
 ```json
   {
       "message": "person deleted successfully",
-      "data": {
-          "acknowledged": true,
-          "deletedCount": 1
-      }
+      "data": null
   }
 ```
