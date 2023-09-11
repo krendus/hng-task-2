@@ -1,15 +1,16 @@
-# Project Support### Introduction
+### Introduction
 This project is the second task given by HNG
 * Users can be created, gotten, updated and deleted.
 ### Installation Guide
-* Clone this repository [here](https://github.com/krendus).
-* The develop branch is the most stable branch at any given time, ensure you're working from it.
-* Run npm install to install all dependencies
+* Clone this repository [here](https://github.com/krendus/hng-task-2.git).
+* The main branch is the most stable branch at any given time, ensure you're working from it.
+* Run `npm install` to install all dependencies
 * You can either work with the default mLab database or use your locally installed MongoDB. Do configure to your choice in the application entry file.
 * Create an .env file in your project root folder and add your variables. See .env.sample for assistance.### Usage
-* Run npm start:dev to start the application.
+* Run `npm run serve` to start the application.
 * Connect to the API using Postman on port 5000. 
-
+#### Host
+[https://hng-task-two-mg2l.onrender.com](https://hng-task-two-mg2l.onrender.com)
 #### Endpoints
 | HTTP Verbs | Endpoint | Action |
 | --- | --- | --- |
