@@ -1,12 +1,14 @@
 ### Introduction
 This project is the second task given by HNG
 * Users can be created, gotten, updated and deleted.
+* Database model [link](https://lucid.app/lucidchart/03e5b338-65e9-44c7-9983-9a8c95f2e498/edit?viewport_loc=394%2C-1%2C1110%2C501%2C0_0&invitationId=inv_5a3aac1e-a4c6-4760-911e-00f4450e20f4)
 ### Installation Guide
 * Clone this repository [here](https://github.com/krendus/hng-task-2.git).
 * The main branch is the most stable branch at any given time, ensure you're working from it.
 * Run `npm install` to install all dependencies
 * You can either work with the default mLab database or use your locally installed MongoDB. Do configure to your choice in the application entry file.
-* Create an .env file in your project root folder and add your variables. See .env.sample for assistance.### Usage
+* Create an .env file in your project root folder and add your variables. See .env.sample for assistance.
+### Usage
 * Run `npm run serve` to start the application.
 * Connect to the API using Postman on port 5000. 
 #### Host
