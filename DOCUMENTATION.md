@@ -1,3 +1,5 @@
+#### Host
+[https://hng-task-two-mg2l.onrender.com](https://hng-task-two-mg2l.onrender.com)
 #### Endpoints
 | HTTP Verbs | Endpoint | Action |
 | --- | --- | --- |
