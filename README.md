@@ -1,16 +1,15 @@
-### Introduction
+# Project Support### Introduction
 This project is the second task given by HNG
 * Users can be created, gotten, updated and deleted.
 ### Installation Guide
-* Clone this repository [here](https://github.com/krendus/hng-task-2.git).
+* Clone this repository [here](https://github.com/krendus).
 * The develop branch is the most stable branch at any given time, ensure you're working from it.
 * Run npm install to install all dependencies
 * You can either work with the default mLab database or use your locally installed MongoDB. Do configure to your choice in the application entry file.
 * Create an .env file in your project root folder and add your variables. See .env.sample for assistance.### Usage
 * Run npm start:dev to start the application.
 * Connect to the API using Postman on port 5000. 
-#### DB Model
-![UML](https://github.com/krendus/hng-task-2/assets/86895631/b976bba4-84cf-43c5-aef0-c79723bc7558)
+
 #### Endpoints
 | HTTP Verbs | Endpoint | Action |
 | --- | --- | --- |
@@ -30,14 +29,13 @@ This project is the second task given by HNG
             "name": "krendus",
             "created_at": "2023-09-10T20:56:28.987Z",
             "updated_at": "2023-09-10T20:56:28.987Z",
-            "_id": "64fe2d7c92aee5c7315a670e",
-            "__v": 0
+            "id": "64fe2d7c92aee5c7315a670e"
         }
     }
 ```
 | HTTP Verbs | Endpoint | Action |
 | --- | --- | --- |
-| GET | /api?name=krendus | To get a single user |
+| GET | /api/:id | To get a single user |
 ##### Response
 ```json
     {
@@ -46,14 +44,13 @@ This project is the second task given by HNG
             "name": "krendus",
             "created_at": "2023-09-10T20:56:28.987Z",
             "updated_at": "2023-09-10T20:56:28.987Z",
-            "_id": "64fe2d7c92aee5c7315a670e",
-            "__v": 0
+            "id": "64fe2d7c92aee5c7315a670e"
         }
     }
 ```
 | HTTP Verbs | Endpoint | Action |
 | --- | --- | --- |
-| PATCH | /api?name=krendus | To create a new cause |
+| PATCH | /api/:id | To patch a user |
 ##### Request
 ```json
     {
@@ -65,25 +62,21 @@ This project is the second task given by HNG
     {
         "message": "Person updated successfuly",
         "data": {
-            "_id": "64fe2d7c92aee5c7315a670e",
+            "id": "64fe2d7c92aee5c7315a670e",
             "name": "samuel",
             "created_at": "2023-09-10T20:56:28.987Z",
-            "updated_at": "2023-09-10T21:54:47.530Z",
-            "__v": 0
+            "updated_at": "2023-09-10T21:54:47.530Z"
         }
     }
 ```
 | HTTP Verbs | Endpoint | Action |
 | --- | --- | --- |
-| DELETE | /api?name=samuel | To delete a single user |
+| DELETE | /api/:id | To delete a single user |
 ##### Response
 ```json
   {
       "message": "person deleted successfully",
-      "data": {
-          "acknowledged": true,
-          "deletedCount": 1
-      }
+      "data": null
   }
 ```
 ### Technologies Used
