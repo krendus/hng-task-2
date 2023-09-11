@@ -9,7 +9,8 @@ This project is the second task given by HNG
 * Create an .env file in your project root folder and add your variables. See .env.sample for assistance.### Usage
 * Run npm start:dev to start the application.
 * Connect to the API using Postman on port 5000. 
-
+#### Host
+[https://hng-task-two-mg2l.onrender.com](https://hng-task-two-mg2l.onrender.com)
 #### Endpoints
 | HTTP Verbs | Endpoint | Action |
 | --- | --- | --- |
