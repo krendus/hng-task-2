@@ -1,12 +1,14 @@
 ### Introduction
 This project is the second task given by HNG
 * Users can be created, gotten, updated and deleted.
+* Database model [link](https://lucid.app/lucidchart/03e5b338-65e9-44c7-9983-9a8c95f2e498/edit?viewport_loc=394%2C-1%2C1110%2C501%2C0_0&invitationId=inv_5a3aac1e-a4c6-4760-911e-00f4450e20f4)
 ### Installation Guide
 * Clone this repository [here](https://github.com/krendus/hng-task-2.git).
 * The main branch is the most stable branch at any given time, ensure you're working from it.
 * Run `npm install` to install all dependencies
 * You can either work with the default mLab database or use your locally installed MongoDB. Do configure to your choice in the application entry file.
-* Create an .env file in your project root folder and add your variables. See .env.sample for assistance.### Usage
+* Create an .env file in your project root folder and add your variables. See .env.sample for assistance.
+### Usage
 * Run `npm run serve` to start the application.
 * Connect to the API using Postman on port 5000. 
 #### Host
@@ -81,4 +83,7 @@ This project is the second task given by HNG
   }
 ```
 ### Technologies Used
-* [NodeJS](https://nodejs.org/) This is a cross-platform runtime environment built on Chrome's V8 JavaScript engine used in running JavaScript codes on the server. It allows for installation and managing of dependencies and communication with databases.* [ExpressJS](https://www.expresjs.org/) This is a NodeJS web application framework.* [MongoDB](https://www.mongodb.com/) This is a free open source NOSQL document database with scalability and flexibility. Data are stored in flexible JSON-like documents.* [Mongoose ODM](https://mongoosejs.com/) This makes it easy to write MongoDB validation by providing a straight-forward, schema-based solution to model to application data.
+* [NodeJS](https://nodejs.org/) This is a cross-platform runtime environment built on Chrome's V8 JavaScript engine used in running JavaScript codes on the server. It allows for installation and managing of dependencies and communication with databases.
+* [ExpressJS](https://www.expresjs.org/) This is a NodeJS web application framework.
+* [MongoDB](https://www.mongodb.com/) This is a free open source NOSQL document database with scalability and flexibility. Data are stored in flexible JSON-like documents.
+* [Mongoose ODM](https://mongoosejs.com/) This makes it easy to write MongoDB validation by providing a straight-forward, schema-based solution to model to application data.
