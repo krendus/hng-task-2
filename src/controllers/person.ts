@@ -5,14 +5,6 @@ export const createPerson = async (req: Request, res: Response) => {
   let {name} = req.body;
   name = typeof name === 'string' && name.trim().length > 0 ? name.trim() : '';
   if (name) {
-    const personFound = await Person.findOne({name});
-    if (personFound) {
-      res.status(400).json({
-        message: 'User already exists',
-        status: 'error',
-      });
-      return;
-    }
     const date = new Date();
     const person = await Person.create({
       name,
